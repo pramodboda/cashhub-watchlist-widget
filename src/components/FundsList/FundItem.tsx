@@ -2,11 +2,11 @@ import React from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-interface SortableItemProps {
+interface FundItemProps {
   id: string;
 }
 
-const FundItem: React.FC<SortableItemProps> = ({ id }) => {
+const FundItem: React.FC<FundItemProps> = ({ id }) => {
   const {
     attributes,
     listeners,

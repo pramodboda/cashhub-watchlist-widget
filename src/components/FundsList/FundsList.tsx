@@ -15,7 +15,7 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
-import SortableItem from "./SortableItem";
+import FundItem from "./FundItem";
 
 const FundsList: React.FC = () => {
   const [items, setItems] = useState<string[]>([
@@ -65,7 +65,7 @@ const FundsList: React.FC = () => {
           }}
         >
           {items.map((id) => (
-            <SortableItem key={id} id={id} />
+            <FundItem key={id} id={id} />
           ))}
         </div>
       </SortableContext>
