@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import FundsList from "./components/FundsList/FundsList"
+import { useState } from 'react';
+import FundsList from "./components/FundsList/FundsList.tsx"
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,7 +9,12 @@ function App() {
 
   return (
     <>
-
+<div style={{ padding: 40 }}>
+      <h2 style={{ textAlign: "center" }}>
+        🧩 dnd-kit — Sortable Funds Vertical List(Locked Axis)
+      </h2>
+      <FundsList />
+    </div>
 
       {/* <div>
         <a href="https://vite.dev" target="_blank">
