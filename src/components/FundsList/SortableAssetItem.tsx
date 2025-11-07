@@ -38,13 +38,7 @@ const SortableAssetItem: React.FC<SortableAssetItemProps> = ({ item, onDelete })
         </IconButton>
       }
     >
-      <ListItemAvatar>
-        <Avatar>{item.symbol.charAt(0)}</Avatar>
-      </ListItemAvatar>
-
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1, width: "100%" }}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1, flex: 1 }}>
-          <Box
+       <Box
             {...attributes}
             {...listeners}
             sx={{ display: "flex", alignItems: "center", cursor: "grab" }}
@@ -53,6 +47,13 @@ const SortableAssetItem: React.FC<SortableAssetItemProps> = ({ item, onDelete })
               <DragIndicatorIcon />
             </IconButton>
           </Box>
+      <ListItemAvatar>
+        <Avatar>{item.symbol.charAt(0)}</Avatar>
+      </ListItemAvatar>
+
+      <Box sx={{ display: "flex", alignItems: "center", gap: 1, width: "100%" }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1, flex: 1 }}>
+         
 
           <ListItemText primary={item.symbol} secondary={item.name} />
         </Box>

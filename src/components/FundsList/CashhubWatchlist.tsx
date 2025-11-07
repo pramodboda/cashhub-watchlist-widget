@@ -98,7 +98,7 @@ export default function CashhubWatchlist({
         Cashhub Watchlist
       </Typography>
 
-      <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
+      {/* <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
         <TextField
           label="Symbol"
           size="small"
@@ -123,7 +123,7 @@ export default function CashhubWatchlist({
         <Button variant="contained" startIcon={<AddIcon />} onClick={handleAdd}>
           Add
         </Button>
-      </Box>
+      </Box> */}
 
       <Divider sx={{ mb: 1 }} />
 
