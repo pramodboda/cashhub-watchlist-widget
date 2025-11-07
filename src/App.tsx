@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import FundsList from "./components/FundsList/FundsList.tsx"
+// import FundsList from "./components/FundsList/FundsList.tsx";
+import CashhubWatchlist from "./components/FundsList/CashhubWatchlist";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -13,7 +14,8 @@ function App() {
       <h2 style={{ textAlign: "center" }}>
         🧩 dnd-kit — Sortable Funds Vertical List(Locked Axis)
       </h2>
-      <FundsList />
+      {/* <FundsList /> */}
+      <CashhubWatchlist />
     </div>
 
       {/* <div>
