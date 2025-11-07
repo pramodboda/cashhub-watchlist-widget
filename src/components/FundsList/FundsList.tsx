@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import {
   DndContext,
   closestCenter,
@@ -17,6 +18,31 @@ import {
 import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import FundItem from "./FundItem";
 
+
+
+// Types
+type Asset = {
+  id: string;
+  symbol: string; // e.g. "NIFTY", "Gold"
+  name: string; // e.g. "Nifty 50 Index"
+  type?: string; // e.g. "Equity", "Commodity", "Debt"
+  tags?: string[];
+  };
+  
+  
+  const STORAGE_KEY = "cashhub_watchlist_v1";
+  
+  
+  // Default sample data
+  const DEFAULT_ASSETS: Asset[] = [
+  { id: uuidv4(), symbol: "NIFTY", name: "Nifty 50", type: "Equity", tags: ["Index"] },
+  { id: uuidv4(), symbol: "SENSEX", name: "Sensex", type: "Equity", tags: ["Index"] },
+  { id: uuidv4(), symbol: "GOLD", name: "Gold (XAU)", type: "Commodity", tags: ["Hedge"] },
+  { id: uuidv4(), symbol: "GOVT", name: "Government Bonds", type: "Debt", tags: ["Safe"] },
+  { id: uuidv4(), symbol: "BTC", name: "Bitcoin", type: "Crypto", tags: ["High Risk"] },
+  ];
+
+  
 const FundsList: React.FC = () => {
   const [items, setItems] = useState<string[]>([
     "Item A",
@@ -24,6 +50,7 @@ const FundsList: React.FC = () => {
     "Item C",
     "Item D",
   ]);
+  
 
   // Configure sensors (mouse + keyboard)
   const sensors = useSensors(
